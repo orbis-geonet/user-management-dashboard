@@ -1,6 +1,6 @@
 # Orbis Admin Dashboard
 
-The internal admin / user-management dashboard for **[Orbis](https://orbis.social)** — a [geo-social network](https://en.wikipedia.org/wiki/Geosocial_networking) where communities claim real-world places and grow their tribe's territory on the map. This is the tool the Orbis team uses to operate the network: manage users, tribes, places and posts, moderate flagged content, track growth statistics, and run email campaigns.
+The admin / user-management dashboard for an **[Orbis](https://orbis.social)** deployment — a [geo-social network](https://en.wikipedia.org/wiki/Geosocial_networking) where communities claim real-world places and grow their tribe's territory on the map. This is the tool a clone operator uses to run their own instance: manage users, tribes, places and posts, moderate flagged content, track growth statistics, and run email campaigns.
 
 It is a Maven multi-module project:
 
