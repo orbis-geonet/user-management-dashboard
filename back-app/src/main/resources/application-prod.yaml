@@ -1,0 +1,40 @@
+spring:
+  data:
+    mongodb:
+      database: orbisv2production
+      uri: ${MONGODB_URI}
+  task:
+    scheduling:
+      pool:
+        size: 5
+google:
+  firebase:
+    apiKey: ${FIREBASE_API_KEY}
+    databaseUrl: https://orbisv2-production-default-rtdb.firebaseio.com/
+    authUrl: https://identitytoolkit.googleapis.com
+  storage:
+    projectId: orbisv2-production
+    bucketName: orbisv2-production.appspot.com
+    credential-path: /google/company-credentials.json
+  place:
+    apiKey: ${GOOGLE_PLACE_API_KEY}
+
+app:
+  campaign-active: true
+  email-campaign-active: false
+  upload-media-active: false
+  back-url: https://your-app.example.com
+  admin-url: https://your-app.example.com
+  dev-task: false
+  email:
+    testMode: false
+    unsubscribeLink: https://orbis.social/unsubscribe/
+    testModeReceiver: your-email@example.com
+    adminEmail: your-email@example.com
+    amazonConfigurationSetName: open_and_click
+    defaultName: ""
+    defaultCompanyName: ""
+    from: your-email@example.com
+    fromName: "Your Company"
+  posting:
+    main-app-link: https://your-app.example.com

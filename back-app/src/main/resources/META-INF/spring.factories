@@ -1,0 +1,2 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  to.orbis.dashboard.config.DotenvEnvironmentPostProcessor

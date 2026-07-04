@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>orbis</groupId>
+        <artifactId>admin</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>front-app</artifactId>
+    <name>front-app</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>1.12.1</version>
+                <executions>
+                    <execution>
+                        <id>install node and yarn</id>
+                        <goals>
+                            <goal>install-node-and-yarn</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>yarn install</id>
+                        <goals>
+                            <goal>yarn</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                    </execution>
+                    <execution>
+                        <id>yarn run build</id>
+                        <goals>
+                            <goal>yarn</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                        <configuration>
+                            <arguments>build</arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <nodeVersion>v16.13.2</nodeVersion>
+                    <yarnVersion>v1.22.17</yarnVersion>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>prod</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.github.eirslett</groupId>
+                        <artifactId>frontend-maven-plugin</artifactId>
+                        <version>1.12.1</version>
+                        <executions>
+                            <execution>
+                                <id>yarn run build</id>
+                                <configuration>
+                                    <environmentVariables>
+                                        <REACT_APP_BACK_URL>https://admin-dot-orbisv2-production.uc.r.appspot.com/api/v1</REACT_APP_BACK_URL>
+                                        <REACT_APP_GOOGLE_KEY>${env.REACT_APP_GOOGLE_KEY}</REACT_APP_GOOGLE_KEY>
+                                        <REACT_APP_GOOGLE_IMG_URL>https://storage.googleapis.com/orbisv2-production.appspot.com</REACT_APP_GOOGLE_IMG_URL>
+                                        <REACT_APP_FIRE_BASE_STORAGE_BUCKET>orbisv2-production.appspot.com</REACT_APP_FIRE_BASE_STORAGE_BUCKET>
+                                        <REACT_APP_FIRE_BASE_PROJECT_ID>orbisv2-production</REACT_APP_FIRE_BASE_PROJECT_ID>
+                                        <REACT_APP_FIRE_BASE_AUTH_DOMAIN>orbisv2-production.firebaseapp.com</REACT_APP_FIRE_BASE_AUTH_DOMAIN>
+                                        <REACT_APP_FIRE_BASE_DATA_BASE_URL>https://orbisv2-production-default-rtdb.firebaseio.com</REACT_APP_FIRE_BASE_DATA_BASE_URL>
+                                        <REACT_APP_FIRE_BASE_MESSAGING_SENDER_ID>278754601811</REACT_APP_FIRE_BASE_MESSAGING_SENDER_ID>
+                                        <REACT_APP_FIRE_BASE_APP_IP>1:278754601811:android:d38ee7e727f4e6de178fa6</REACT_APP_FIRE_BASE_APP_IP>
+                                        <REACT_APP_FIRE_BASE_MEASUREMENT_ID>G-BMFJCTPWEL</REACT_APP_FIRE_BASE_MEASUREMENT_ID>
+                                    </environmentVariables>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>staging</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.github.eirslett</groupId>
+                        <artifactId>frontend-maven-plugin</artifactId>
+                        <version>1.12.1</version>
+                        <executions>
+                            <execution>
+                                <id>yarn run build</id>
+                                <configuration>
+                                    <environmentVariables>
+                                        <REACT_APP_BACK_URL>https://admin-dot-orbisv2-production.uc.r.appspot.com/api/v1</REACT_APP_BACK_URL>
+                                        <REACT_APP_GOOGLE_KEY>${env.REACT_APP_GOOGLE_KEY}</REACT_APP_GOOGLE_KEY>
+                                        <REACT_APP_GOOGLE_IMG_URL>https://storage.googleapis.com/orbisv2-production.appspot.com</REACT_APP_GOOGLE_IMG_URL>
+                                        <REACT_APP_FIRE_BASE_STORAGE_BUCKET>orbisv2-production.appspot.com</REACT_APP_FIRE_BASE_STORAGE_BUCKET>
+                                        <REACT_APP_FIRE_BASE_PROJECT_ID>orbisv2-production</REACT_APP_FIRE_BASE_PROJECT_ID>
+                                        <REACT_APP_FIRE_BASE_AUTH_DOMAIN>orbisv2-production.firebaseapp.com</REACT_APP_FIRE_BASE_AUTH_DOMAIN>
+                                        <REACT_APP_FIRE_BASE_DATA_BASE_URL>https://orbisv2-production-default-rtdb.firebaseio.com</REACT_APP_FIRE_BASE_DATA_BASE_URL>
+                                        <REACT_APP_FIRE_BASE_MESSAGING_SENDER_ID>278754601811</REACT_APP_FIRE_BASE_MESSAGING_SENDER_ID>
+                                        <REACT_APP_FIRE_BASE_APP_IP>1:278754601811:android:d38ee7e727f4e6de178fa6</REACT_APP_FIRE_BASE_APP_IP>
+                                        <REACT_APP_FIRE_BASE_MEASUREMENT_ID>G-BMFJCTPWEL</REACT_APP_FIRE_BASE_MEASUREMENT_ID>
+                                    </environmentVariables>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

@@ -1,0 +1,30 @@
+runtime: java17
+
+entrypoint: java -XshowSettings -Xmx64m -XX:+UseContainerSupport -jar back-app-1.0-SNAPSHOT.jar
+
+handlers:
+  - url: /.*
+    script: this field is required, but ignored
+    secure: always
+
+service: admin
+
+env_variables:
+  SPRING_PROFILES_ACTIVE: prod
+  REACT_APP_BACK_URL: https://admin-dot-orbisv2-production.uc.r.appspot.com/api/v1
+  FIRE_BASE_STORAGE_BUCKET: orbisv2-production.appspot.com
+
+
+  MONGODB_URI: REPLACE_WITH_MONGODB_URI
+  JWT_SECRET: REPLACE_WITH_JWT_SECRET
+  AWS_ACCESS_KEY: REPLACE_WITH_AWS_ACCESS_KEY
+  AWS_SECRET_KEY: REPLACE_WITH_AWS_SECRET_KEY
+  GOOGLE_API_KEY: REPLACE_WITH_GOOGLE_API_KEY
+  FIREBASE_API_KEY: REPLACE_WITH_FIREBASE_API_KEY
+  GOOGLE_PLACE_API_KEY: REPLACE_WITH_GOOGLE_PLACE_API_KEY
+
+instance_class: F2
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 1

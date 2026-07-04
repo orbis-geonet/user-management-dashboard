@@ -1,0 +1,44 @@
+spring:
+  data:
+    mongodb:
+      database: orbisv2production
+      uri: ${MONGODB_URI}
+  task:
+    scheduling:
+      pool:
+        size: 5
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+google:
+  firebase:
+    apiKey: ${FIREBASE_API_KEY}
+    databaseUrl: https://orbisv2-production-default-rtdb.firebaseio.com/
+    authUrl: https://identitytoolkit.googleapis.com
+  storage:
+    projectId: orbisv2-production
+    bucketName: orbisv2-production.appspot.com
+  place:
+    apiKey: ${GOOGLE_PLACE_API_KEY}
+
+app:
+  campaign-active: false
+  email-campaign-active: false
+  upload-media-active: true
+  back-url: https://your-domain.example.com/unsubscribe/
+  admin-url: http://localhost:8080
+  dev-task: true
+  email:
+    testMode: false
+    unsubscribeLink: https://orbis.social/unsubscribe/
+    testModeReceiver: admin@example.com
+    adminEmail: admin@example.com
+    amazonConfigurationSetName: open_and_click
+    defaultName: ""
+    defaultCompanyName: ""
+    from: admin@example.com
+    fromName: "Orbis Rede Geo-Social"
+  posting:
+    main-app-link: https://your-app.example.com

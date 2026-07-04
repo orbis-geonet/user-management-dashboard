@@ -1,0 +1,37 @@
+spring:
+  data:
+    mongodb:
+      database: orbisv2
+      uri: ${MONGODB_URI}
+  task:
+    scheduling:
+      pool:
+        size: 5
+google:
+  firebase:
+    apiKey: ${FIREBASE_API_KEY}
+    databaseUrl: https://your-db.example.com
+    authUrl: https://identitytoolkit.example.com
+  storage:
+    projectId: orbis-v2
+    bucketName: orbis-v2.appspot.com
+  place:
+    apiKey: ${GOOGLE_PLACE_API_KEY}
+
+app:
+  campaign-active: false
+  email-campaign-active: false
+  back-url: https://your-backend.example.com
+  admin-url: https://your-admin.example.com
+  email:
+    testMode: false
+    unsubscribeLink: https://your-domain.example.com/unsubscribe/
+    testModeReceiver: your-email@example.com
+    adminEmail: admin@example.com
+    amazonConfigurationSetName: your-configuration-set
+    defaultName: "Your App"
+    defaultCompanyName: "Your Company"
+    from: no-reply@example.com
+    fromName: "Your Company"
+  posting:
+    main-app-link: https://your-app.example.com

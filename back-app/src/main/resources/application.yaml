@@ -1,0 +1,63 @@
+spring:
+  data:
+    mongodb:
+      database: orbis
+  jackson:
+    default-property-inclusion: non_null
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+google:
+  storage:
+    projectId: orbisv2-production
+    bucketName: orbisv2-production.appspot.com
+    credential-path: /google/company-credentials.json
+
+app:
+  campaign-active: true
+  email-campaign-active: true
+  upload-media-active: true
+  openstreetmap:
+    search-url: https://nominatim.openstreetmap.org/reverse
+  link:
+    group: https://orbis.social/g/
+    place: https://orbis.social/p/
+    user: https://orbis.social/u/
+  posting:
+    main-app-link: https://orbis-v2.rj.r.appspot.com
+    real-posting: true
+  user:
+  auth:
+    header: Authorization
+    jwt:
+      secret: ${JWT_SECRET}
+  email:
+    defaultName: "Dear friend"
+    defaultCompanyName: ""
+    from: felipe@orbis.social
+    fromName: "Orbis Rede Geo-Social"
+
+integration:
+  google:
+    apiKey: ${GOOGLE_API_KEY:prodonly}
+
+cloud:
+  aws:
+    region:
+      static: us-east-2
+      auto: false
+    stack:
+      auto: false
+    credentials:
+      access-key: ${AWS_ACCESS_KEY}
+      secret-key: ${AWS_SECRET_KEY}
+
+server:
+  error:
+    include-message: always
+
