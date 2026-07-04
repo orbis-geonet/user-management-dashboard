@@ -35,7 +35,6 @@ const App = () => (
         <Resource name="emailCampaigns/emailCampaignInfo"/>
         <Resource name="reports" list={ReportList}/>
         <Resource name="partners" list={PartnerList}/>
-        <Resource name="usersPost"/>
     </Admin>
 );
 

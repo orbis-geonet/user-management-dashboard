@@ -58,7 +58,7 @@ public class PlaceService extends AdminService<PlaceListDto, PlaceDto>{
     @Value("${app.link.place}")
     private String shareLink;
 
-    @Value("${app.posting.main-app-link}")
+    @Value("${app.main-app-link}")
     private String mainAppLink;
 
     public PlaceService(

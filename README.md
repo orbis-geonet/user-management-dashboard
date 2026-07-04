@@ -15,7 +15,7 @@ The dashboard exposes CRUD screens and operations over the core entities of the 
 
 - **Users & user sets** — browse, search, edit and group user accounts; follow relationships; bulk CSV import/export.
 - **Tribes (groups) & places** — manage tribe pages and real-world places, with Google Maps fields and territory polygon recalculation.
-- **Posts & feed** — inspect and moderate user posts, including admin posting to the main app.
+- **Posts & feed** — inspect and moderate user posts.
 - **Moderation** — review user **reports** and **flagged entities** (users / posts / places), resolve or delete offending content.
 - **Partners** — manage partner records and per-partner statistics.
 - **Statistics** — growth and activity metrics with bar / pie chart views and configurable periods.

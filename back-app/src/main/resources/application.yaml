@@ -19,7 +19,6 @@ google:
     credential-path: /google/company-credentials.json
 
 app:
-  campaign-active: true
   email-campaign-active: true
   upload-media-active: true
   openstreetmap:
@@ -28,9 +27,7 @@ app:
     group: https://orbis.social/g/
     place: https://orbis.social/p/
     user: https://orbis.social/u/
-  posting:
-    main-app-link: https://orbis-v2.rj.r.appspot.com
-    real-posting: true
+  main-app-link: https://orbis-v2.rj.r.appspot.com
   user:
   auth:
     header: Authorization

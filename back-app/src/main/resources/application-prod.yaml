@@ -20,7 +20,6 @@ google:
     apiKey: ${GOOGLE_PLACE_API_KEY}
 
 app:
-  campaign-active: true
   email-campaign-active: false
   upload-media-active: false
   back-url: https://your-app.example.com
@@ -36,5 +35,4 @@ app:
     defaultCompanyName: ""
     from: your-email@example.com
     fromName: "Your Company"
-  posting:
-    main-app-link: https://your-app.example.com
+  main-app-link: https://your-app.example.com

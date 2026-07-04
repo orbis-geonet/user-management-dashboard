@@ -24,7 +24,6 @@ google:
     apiKey: ${GOOGLE_PLACE_API_KEY}
 
 app:
-  campaign-active: false
   email-campaign-active: false
   upload-media-active: true
   back-url: https://your-domain.example.com/unsubscribe/
@@ -40,5 +39,4 @@ app:
     defaultCompanyName: ""
     from: admin@example.com
     fromName: "Orbis Rede Geo-Social"
-  posting:
-    main-app-link: https://your-app.example.com
+  main-app-link: https://your-app.example.com
